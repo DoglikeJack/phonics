@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phonics Sounds</title>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;700&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header>
+ <h1>Phonics <span>Sounds</span> <small style="font-family:Sarabun;font-weight:400;font-size:13px;color:var(--mute)">คู่มือเสียงประกอบใบงาน — กดที่ตัวอักษร/คำเพื่อฟัง</small></h1>
+ <div class="tabs" id="tabs">
+  <div class="tab on" data-g="all">All</div><div class="tab" data-g="letters">Letters A–Z</div><div class="tab" data-g="short">Short vowels</div>
+  <div class="tab" data-g="digraph">Digraphs</div><div class="tab" data-g="magic">Magic e</div><div class="tab" data-g="teams">Vowel teams</div>
+ </div>
+ <div class="ctrl">
+  <label>Voice <select id="voice"></select></label>
+  <label>Speed <input type="range" id="rate" min="0.5" max="1.2" step="0.05" value="0.8"></label>
+  <label>Pause (Sound it out) <input type="range" id="gap" min="200" max="1200" step="100" value="600"></label>
+  <button class="b" id="stop" style="padding:5px 12px">■ Stop</button>
+ </div>
+</header>
+<div class="warn" id="warn">ใช้เสียงสังเคราะห์ของเบราว์เซอร์ (Web Speech) — แนะนำ Chrome / Edge / Safari และเลือกเสียงภาษาอังกฤษ เสียงตัวอักษรเดี่ยว (เช่น /b/ = "buh") เป็นเสียงโดยประมาณ ครูควรออกเสียงตัวอย่างประกอบด้วย</div>
+<main id="main"></main>
+<script src="data1.js"></script><script src="data2.js"></script>
+<script>const CARDS=[...CARDS1,...CARDS2];</script><script src="app.js"></script></body></html>
